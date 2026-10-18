@@ -1,2 +1,2 @@
-# devbox-node
+# devbox-node.js
 A development container for node.js projects.
