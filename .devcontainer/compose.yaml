@@ -1,0 +1,9 @@
+services:
+  devbox-nodejs:
+    build: .
+    volumes:
+      - ../repos:/node-js-repos
+    container_name: devbox-nodejs
+    hostname: devbox-nodejs
+    command: sleep infinity
+    init: true

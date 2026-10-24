@@ -1,0 +1,36 @@
+{
+    "name": "devbox-nodejs",
+    "dockerComposeFile": "compose.yaml",
+    "service": "devbox-nodejs",
+    "forwardPorts": [
+        3000,
+        5173
+    ],
+    "postCreateCommand": "bash -i -c 'echo NVM: $(nvm --version) && echo Node: $(node --version) && echo NPM: $(npm --version) && echo Yarn: $(yarn --version)'",
+    "runServices": [
+        "devbox-nodejs"
+    ],
+    "workspaceFolder": "/node-js-repos",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "usernamehw.errorlens"
+            ],
+            "settings": {
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "file",
+                "editor.formatOnType": true
+                // "[javascript]": {
+                //     "diffEditor.ignoreTrimWhitespace": false,
+                //     "editor.defaultFormatter": ""
+                // },
+                // "[typescript]": {
+                //     "diffEditor.ignoreTrimWhitespace": false,
+                //     "editor.defaultFormatter": ""
+                // }
+            }
+        }
+    }
+}

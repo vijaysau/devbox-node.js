@@ -1,2 +1,2 @@
-# devbox-node.js
-A development container for node.js projects.
+# devbox-nodejs
+A development container for Node.js projects.
